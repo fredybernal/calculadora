@@ -8,39 +8,43 @@
     <title>calculadora</title>
     <script> src=""</script>
 </head>
-<body>
+<body class="dark">
     <!-----------nombre cada uno de los botones para poder darles la funcion necesaria con JavaScript----------->
     <!-------------los numeros tienen el mismo nombre para poder meterlos todos en un arreglo y haci evitar hacerles a cada uno por aparte el evento click------------------>
-    <div class="calculadora-grilla">
-        <div class="output">
-            <button class="switch" id="switch">
-                <span></span>
-                <span></span>
-            </button>
-            <input class="display" type="text" id="result" placeholder="0">
+        <div class="calculadora-grilla">
+
+
+            <div class="output">
+                <input class="display" type="text" id="result" placeholder="0">
+                <td><input class="fila" id="backspace" type="button" value="←"></td>
+                <div class="dark-mode">
+                    <input id="toggle-button" type="checkbox">
+                    <label  for="toggle-button">
+                        <div class="sun-moon"></div>   
+                    </label> 
+                </div>
+            </div>
+            
+        
+            <button name="data-number">1</button>  
+            <button name="data-number">2</button>  
+            <button name="data-number">3</button>  
+            <button name="data-opera">+</button>  
+            <button name="data-number">4</button>  
+            <button name="data-number">5</button>  
+            <button name="data-number">6</button>         
+            <button name="data-opera">-</button>
+            <button name="data-number">7</button>  
+            <button name="data-number">8</button>  
+            <button name="data-number">9</button>  
+            <button name="data-opera">/</button> 
+            <button name="data-delete">C</button>
+            <button name="data-number">0</button>  
+            <button name="data-igual">=</button>
+            <button name="data-opera">*</button>      
         </div>
-        <button name="data-number">1</button>  
-        <button name="data-number">2</button>  
-        <button name="data-number">3</button>  
-        <button name="data-opera">+</button>  
-        <button name="data-number">4</button>  
-        <button name="data-number">5</button>  
-        <button name="data-number">6</button>         
-        <button name="data-opera">-</button>
-        <button name="data-number">7</button>  
-        <button name="data-number">8</button>  
-        <button name="data-number">9</button>  
-        <button name="data-opera">/</button>  
-        <button name="data-delete">C</button>
-        <button name="data-number">0</button>  
-        <button name="data-igual">=</button>
-        <button name="data-opera">*</button>      
-
-
-
-    </div>
-
-
-    <script src="calculadora.js"></script>
+    <script type="text/javascript" src="calculadora.js"></script>
 </body>
 </html>
+<!----<div class="calculadora-grilla"></div>
+</div>---->

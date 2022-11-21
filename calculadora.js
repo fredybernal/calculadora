@@ -37,6 +37,7 @@ botonDelete.addEventListener('click', function(){// aca se hace lo mismo que en 
     clear();//dentro de esa funcion vamos a llamar a un metodo que se llama clear  que va a limpiar la pantalla o el display
     actualizarDisplay(); //y tambien llamara actualizar display
 })
+
 // se define el metodo de selectoperacion 
 function selectOperacion(op){// op es la operacion 
     if(operActual === '') return;//si operacual el igual a vacio no hace nada
@@ -96,4 +97,22 @@ function actualizarDisplay(){
     result.value = operActual;//lo que va hacer es mostrar el resultado value igual ala operacion acual  
 }
 
+function ultNumero(){
+    cifras =x.length; //hayar número de caracteres en pantalla
+    br =x.substr(cifras-1,cifras) //info del último caracter
+    x=x.substr(0,cifras-1) //quitar el ultimo caracter
+    if (x=="") {x="0";} //si ya no quedan caracteres, pondremos el 0
+    if (br==".") {coma=0;} //Si hemos quitado la coma, se permite escribirla de nuevo.
+    pantalla.innerHTML=x; //mostrar resultado en pantalla
+}
+
 clear();//cada vez que la pagina se actualeze va a llamar al metodo clear 
+
+ 
+const toggleButton = document.getElementById('toggle-button')
+
+
+toggleButton.addEventListener('change', () => {
+    document.body.classList.toggle('dark')
+  })
+

@@ -1,21 +1,86 @@
-@media(max-width:320px){
-    
-}
-
 
 body{
     padding: 0;
-    margin: 0;
+    margin: 0px;
     background: linear-gradient(to right, #00aaff, #00ff6c );
+
 }
+body {
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    place-items: center;
+    transition: background 0.3s ease;
+  }
+body.dark {
+    background: var(--dark-2);
+  }
+input {
+    position: absolute;
+}
+
+label {
+    align-items: center;
+    background: var(--light-2);
+    background: url('https://i.ibb.co/ZWmbGbj/etmfdr.gif');
+    background-position: bottom;
+    background-size: cover;
+    border-radius: 35px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    position: relative;
+    width: 100px;
+  }
+.output .dark-mode{
+    margin-top: 70px;
+}
+
+  #toggle-button:checked + label {
+    background: var(--dark-0);
+    background: url('https://i.pinimg.com/originals/94/ff/74/94ff7463a1574221ba6d4ada2c997e0b.gif');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  label .sun-moon {
+    background: radial-gradient(var(--green), transparent);
+    border-radius: 50%;
+    height: 30px;
+    margin: 4px;
+    transition: transform 0.3s ease;
+    width: 30px;
+  }
+  #toggle-button{
+    align-items: center;
+  }
+
+  #toggle-button:checked + label .sun-moon {
+    background: radial-gradient(var(--blue), transparent);
+    transform: translateX(72px);
+  }
+
+  :root {
+    --light-0: #f8f9fa;
+    --light-1: #e9ecef;
+    --light-2: #dee2e6;
+    --dark-0: #495057;
+    --dark-1: #343a40;
+    --dark-2: #212529;
+    --green: #c3c82c;
+    --blue: #2939ff;
+  }
+ 
+
 
 .calculadora-grilla{
     display: grid;
     justify-content: center;
     align-content: center;
     min-height: 100vh;
-    grid-template-columns: repeat(4,  100px) ;
-    grid-template-rows: minmax(120px, auto)repeat(5,  100px);
+    grid-template-columns: repeat(4,  70px) ;
+    grid-template-rows: minmax(120px, auto)repeat(5,  80px);
 }
 
 .calculadora-grilla > button{
@@ -40,8 +105,9 @@ body{
 }
 
 .output .display{
+    margin-bottom:  70px;
     color: black;
-    font-size: 1.60rem;
+    font-size: 1.20rem;
     text-align: right;
 }
 
